@@ -46,9 +46,9 @@ public enum SegmentEliminationStyle {
             case NONE:
                 return "None";
             case SINGLE:
-                return "Single";
+                return "Single-Elimination";
             case DOUBLE:
-                return "Double";
+                return "Double-Elimination";
             default:
                 return "Error - Invalid elimination style.";
         }
