@@ -919,15 +919,13 @@ public class TournamentEvent
             throw new TournamentStateException("No such participant.");
         }
         
-        ArrayList<R> eventRounds = getAllEventRounds();
+        ArrayList<M> participantMatches = getAllParticipantMatches(participant);
         
-        if(round <= 0 || eventRounds.size() < round) {
-            throw new TournamentStateException("Provided round outside of range.");
+        if(round <= 0 || participantMatches.size() < round) {
+            return 0;
         }
         
         int pointTotal = 0;
-        
-        ArrayList<M> participantMatches = getAllParticipantMatches(participant);
         
         if(participantMatches.size() > 0)
             for(int i = 0; i < round; i++) {
